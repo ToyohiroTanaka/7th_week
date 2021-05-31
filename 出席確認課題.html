@@ -41,12 +41,10 @@
     var box = new THREE.Mesh(geometry, mat1);
     box.position.z = -5;
     box.position.x = -1;
-    scene.add(box);
-    // 箱を作成
-    var geometry = new THREE.BoxGeometry(1, 1, 1);
     var box2 = new THREE.Mesh(geometry, mat2);
     box2.position.z = -5;
     box2.position.x = 1;
+    scene.add(box);
     scene.add(box2);
 
    // 平行光源
