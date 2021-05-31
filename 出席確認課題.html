@@ -35,7 +35,7 @@
       // バンプマップ読み込み
     var bump = textureLoader.load("stone-bump.jpg");
     mat1.bumpMap = bump;
-    mat1.bumpscale = 0.2;
+    mat1.bumpscale = 0.3;
     // 箱を作成
     var geometry = new THREE.BoxGeometry(1, 1, 1);
     var box = new THREE.Mesh(geometry, mat1);
@@ -46,11 +46,12 @@
     box2.position.x = 1;
     scene.add(box);
     scene.add(box2);
-    // 平面を作成
-    var geometry = new THREE.PlaneGeometry( 1, 2, 3 );
-    var plane = new THREE.Mesh( geometry,  );
-    plane.position.z = -5;
-    scene.add( plane );
+    
+    var geometry2 = new THREE.BoxGeometry(3, 3, 3);
+    var box = new THREE.Mesh(geometry, mat1);
+    box3.position.z = -5;
+    box3.position.y = -5;
+    scene.add(box3);
 
    // 平行光源
    var directionalLight1 = new THREE.DirectionalLight(0xffffff);
