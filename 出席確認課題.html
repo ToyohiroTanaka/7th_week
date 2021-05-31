@@ -44,10 +44,10 @@
     scene.add(box);
     // 箱を作成
     var geometry = new THREE.BoxGeometry(1, 1, 1);
-    var box = new THREE.Mesh(geometry, mat2);
+    var box2 = new THREE.Mesh(geometry, mat2);
     box.position.z = -5;
     box.position.x = 1;
-    scene.add(box);
+    scene.add(box2);
 
    // 平行光源
    var directionalLight1 = new THREE.DirectionalLight(0xffffff);
@@ -72,6 +72,8 @@
     // 箱を回転させる
     box.rotation.x += 0.01;
     box.rotation.y += 0.01;
+    box2.rotation.x += 0.01;
+    box2.rotation.y += 0.01;
   
       renderer.render(scene, camera);
     };
